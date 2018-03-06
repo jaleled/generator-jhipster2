@@ -291,7 +291,7 @@ public class <%= entityClass %> implements Serializable {
     _%>
 //@OneToMany(mappedBy = "<%= otherEntityRelationshipName %>")
 @JsonIgnore
-
+@DBRef
 private List<<%= otherEntityNameCapitalized %>> <%= relationshipFieldNamePlural %> = new ArrayList<>();
 
 <%_ } else if (relationshipType === 'many-to-one') { _%>
